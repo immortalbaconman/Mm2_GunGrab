@@ -1,10 +1,7 @@
 local UIS = game:GetService("UserInputService")
---lastlocation = nil
 
 UIS.InputBegan:Connect(function(input, busy)
     if input.KeyCode == Enum.KeyCode.G and not busy  then
-       -- lastlocation = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):FindFirstChild("GunDrop", true).CFrame
-       -- game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = lastlocation
     end
 end)
