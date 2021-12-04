@@ -1,7 +1,7 @@
-local UIS = game:GetService("UserInputService")
+ local UIS = game:GetService("UserInputService")
 
-UIS.InputBegan:Connect(function(input, busy)
-    if input.KeyCode == Enum.KeyCode.G and not busy  then
-        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):FindFirstChild("GunDrop", true).CFrame
+UIS.InputBegan:Connect(function(input)
+   if input.KeyCode == Enum.KeyCode.G then
+       game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):FindFirstChild("GunDrop", true).CFrame
     end
 end)
